@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu } from 'lucide-react';
+import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null);
@@ -78,7 +79,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <nav className="flex justify-between items-center h-24">
             <Link to="/" className="flex items-center py-4">
-              <img src="/images/logo.png" alt="ZES Engineering" className="h-16" />
+              <img src={logo} alt="ZES Engineering" className="h-16" />
             </Link>
 
             {/* Desktop Menu */}

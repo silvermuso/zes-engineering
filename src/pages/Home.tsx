@@ -1,6 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Monitor, Brain, Sprout, Users } from 'lucide-react';
+import industrialBg from '../assets/images/industrial-bg.jpg';
+import companyBg from '../assets/images/company-bg.jpg';
+import solutionsBg from '../assets/images/solutions-bg.jpg';
+import company1 from '../assets/images/company-1.jpg';
+import company2 from '../assets/images/company-2.jpg';
+import portfolio1 from '../assets/images/portfolio-1.jpg';
+import portfolio2 from '../assets/images/portfolio-2.jpg';
 
 const Home = () => {
   const [currentSection, setCurrentSection] = useState(0);
@@ -15,7 +22,7 @@ const Home = () => {
   const sections = [
     {
       id: 'hero',
-      bgImage: '/images/industrial-bg.jpg',
+      bgImage: industrialBg,
       slogans: [
         "AI와 함께하는 안전한 산업 환경",
         "스마트 기술로 지키는 작업자의 하루",
@@ -24,22 +31,22 @@ const Home = () => {
     },
     {
       id: 'about',
-      bgImage: '/images/company-bg.jpg',
+      bgImage: companyBg,
       title: '회사 소개',
     },
     {
       id: 'solutions',
-      bgImage: '/images/solutions-bg.jpg',
+      bgImage: solutionsBg,
       title: '주요 사업 영역',
     },
     {
       id: 'portfolio',
-      bgImage: '/images/solutions-bg.jpg',
+      bgImage: solutionsBg,
       title: '포트폴리오',
     },
     {
       id: 'contact',
-      bgImage: '/images/solutions-bg.jpg',
+      bgImage: solutionsBg,
       title: '문의하기',
     }
   ];
@@ -73,12 +80,12 @@ const Home = () => {
 
   const portfolioItems = [
     {
-      image: '/images/portfolio-1.jpg',
+      image: portfolio1,
       title: 'OO기업 – 안전솔루션 시스템 구축',
       description: '작업자 안전 확보'
     },
     {
-      image: '/images/portfolio-2.jpg',
+      image: portfolio2,
       title: 'OO농장 – 스마트팜 통합솔루션 시스템 구축',
       description: '작물 생산성 200% 향상'
     }
@@ -193,8 +200,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <img src="/images/company-1.jpg" alt="회사 내부" className="rounded-lg" />
-                <img src="/images/company-2.jpg" alt="사업자 등록증" className="rounded-lg" />
+                <img src={company1} alt="회사 내부" className="rounded-lg" />
+                <img src={company2} alt="사업자 등록증" className="rounded-lg" />
               </div>
             </div>
           </div>
