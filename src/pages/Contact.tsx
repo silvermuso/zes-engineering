@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+interface IInquiryCategories {
+  [key: string]: string[];
+  기술지원: string[];
+  제안사항: string[];
+  기타: string[];
+}
+
 const Contact = () => {
   const location = useLocation();
-  const [inquiryType, setInquiryType] = useState('기술지원');
+  const [inquiryType, setInquiryType] = useState<string>('기술지원');
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   useEffect(() => {
@@ -21,7 +28,7 @@ const Contact = () => {
     }
   }, [location]);
 
-  const inquiryCategories = {
+  const inquiryCategories: IInquiryCategories = {
     '기술지원': ['설치', '수리', '부품교체', '점검'],
     '제안사항': ['제품제안', '서비스제안', '기타제안'],
     '기타': ['기타문의']
