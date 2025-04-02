@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import contactSubBg from '../assets/images/contact-sub-bg.jpg';
 
 interface IInquiryCategories {
   [key: string]: string[];
@@ -37,7 +38,7 @@ const Contact = () => {
   return (
     <div className="pt-16">
       {/* 문의하기 헤더 */}
-      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: 'url("/images/contact-sub-bg.jpg")' }}>
+      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: `url(${contactSubBg})` }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white">문의하기</h1>

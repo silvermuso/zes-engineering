@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import companySubBg from '../assets/images/company-sub-bg.jpg';
+import company1 from '../assets/images/company-1.jpg';
+import company2 from '../assets/images/company-2.jpg';
+import company3 from '../assets/images/company-3.jpg';
 
 declare global {
   interface Window {
@@ -29,9 +33,9 @@ const Company = () => {
   }, [location]);
 
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       {/* 회사소개 헤더 */}
-      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: 'url("/images/company-sub-bg.jpg")' }}>
+      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: `url(${companySubBg})` }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white">회사소개</h1>
@@ -46,7 +50,7 @@ const Company = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <img src="/images/company-1.jpg" alt="기업 전경" className="rounded-lg shadow-lg w-full" />
+              <img src={company1} alt="기업 전경" className="rounded-lg shadow-lg w-full" />
             </div>
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-gray-800">ZES Engineering</h3>
@@ -77,7 +81,7 @@ const Company = () => {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <img src="/images/company-2.jpg" alt="연혁" className="rounded-lg shadow-lg w-full" />
+              <img src={company2} alt="연혁" className="rounded-lg shadow-lg w-full" />
             </div>
           </div>
         </div>
@@ -89,7 +93,7 @@ const Company = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <img src="/images/company-3.jpg" alt="CEO" className="rounded-lg shadow-lg w-full" />
+              <img src={company3} alt="CEO" className="rounded-lg shadow-lg w-full" />
             </div>
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-gray-800">안녕하세요</h3>

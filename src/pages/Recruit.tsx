@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import recruitSubBg from '../assets/images/recruit-sub-bg.jpg';
 
 const Recruit = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ const Recruit = () => {
   return (
     <div className="pt-16">
       {/* 채용 헤더 */}
-      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: 'url("/images/recruit-sub-bg.jpg")' }}>
+      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: `url(${recruitSubBg})` }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white">채용</h1>
