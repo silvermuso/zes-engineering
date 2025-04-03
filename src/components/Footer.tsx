@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/logo.png';
 
 const Footer = () => {
   const menuItems = [
@@ -43,7 +44,7 @@ const Footer = () => {
           {/* 로고 및 회사 정보 */}
           <div>
             <Link to="/" className="block mb-4">
-              <img src="/images/logo.png" alt="ZES Engineering" className="h-8" />
+              <img src={logo} alt="ZES Engineering" className="h-8" />
             </Link>
             <p className="text-sm">
               최첨단 AI 기술로 산업 현장의<br />
