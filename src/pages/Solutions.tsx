@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import solutionsSubBg from '../assets/images/solutions-sub-bg.jpg';
 
 const Solutions = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ const Solutions = () => {
   return (
     <div className="pt-24">
       {/* 솔루션 헤더 */}
-      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: 'url("/images/solutions-sub-bg.jpg")' }}>
+      <div className="relative h-[300px] bg-cover bg-center" style={{ backgroundImage: `url(${solutionsSubBg})` }}>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white">스마트팩토리</h1>
